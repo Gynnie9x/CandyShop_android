@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="152dp"
+        android:text="Description"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:text="Cost"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemDes" />
+
+    <TextView
+        android:id="@+id/itemNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:text="Number in Stock"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCost" />
+
+    <EditText
+        android:id="@+id/descriptBlank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="78dp"
+        android:hint="Item description"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/itemName"
+        app:layout_constraintStart_toEndOf="@+id/itemDes"
+        app:layout_constraintTop_toBottomOf="@+id/itemName" />
+
+    <EditText
+        android:id="@+id/costBlank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:hint="price"
+        android:inputType="numberDecimal"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/descriptBlank"
+        app:layout_constraintTop_toBottomOf="@+id/descriptBlank" />
+
+    <EditText
+        android:id="@+id/itemQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:hint="Number of Candy"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/itemNum"
+        app:layout_constraintStart_toEndOf="@+id/itemNum" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemNum" />
+
+    <Button
+        android:id="@+id/delButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
